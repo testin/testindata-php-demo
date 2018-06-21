@@ -1,22 +1,21 @@
 # testindata php demo
 
-**启动 PHP Server**
-进到 php 目录下
-
-`php -S 0.0.0.0:8000`
-
 **启动 SDK server**
 
 进到 sdk-server 目录下
 
-`wget https://ab.testin.cn/sdk/java/testin-ab-v1.2.1.war`
-`java -jar testin-ab-v1.2.1.war`
+```bash
+wget https://ab.testin.cn/sdk/java/testin-ab-v1.2.1.war
+java -jar testin-ab-v1.2.1.war
+```
 
-**初始化 SDK Server**
+**启动 PHP Server**
 
-**访问页面**
+进到 php 目录下
 
-http://127.0.0.1:8000
+`php -S 0.0.0.0:8000`
+
+`index.php` 是访问的入口文件，`init.php` 是初始化脚本，`A.html` `B.html` `C.html` 是三个版本对应的页面代码
 
 ## 参考资料
 
