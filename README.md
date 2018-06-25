@@ -1,6 +1,8 @@
-# testindata php demo
+# TestinData php demo
 
-**启动 SDK server**
+> Testin SDK Server 和 PHP 集成的示例
+
+**第一步：启动 SDK server**
 
 进到 sdk-server 目录下
 
@@ -9,13 +11,40 @@ wget https://ab.testin.cn/sdk/java/testin-ab-v1.2.1.war
 java -jar testin-ab-v1.2.1.war
 ```
 
-**启动 PHP Server**
+| 文件                        | 备注
+| -------------------------- | --------------
+| application.properties     | 配置文件
+
+**配置项**
+
+| 属性                                  | 备注
+| ------------------------------------ | --------
+| testin.data.ab.appkey                | appKey
+| testin.data.ab.cache.directory       | 缓存目录
+
+**第二步：启动 PHP Server**
 
 进到 php 目录下
 
 `php -S 0.0.0.0:8000`
 
-`index.php` 是访问的入口文件，`init.php` 是初始化脚本，`A.html` `B.html` `C.html` 是三个版本对应的页面代码
+| 文件                          | 功能              
+| ---------------------------- | ---------------- 
+|`classes/TestinSDK.php`       | Testin SDK 类文件     
+|`index.php`                   | 是访问的入口文件     
+|`A.html`                      | 原始版本 
+|`B.html`                      | 版本一 
+|`C.html`                      | 版本二
+
+**配置项**
+
+| 属性                          | 默认值                   | 备注
+| ---------------------------- | ----------------------- | -------
+| sdk_server                   | http://127.0.0.1:8070   | 第一步中 SDK Server 的地址
+| curl_timeout_ms              | 200                     | curl 超时时间
+| curl_connection_timeout_ms   | 200                     | curl connection 超时时间
+| cookie_name                  | userid                  | 用来标识用户的 cookie 名称
+| cookie_age                   | 86400                   | cookie 过期时间
 
 ## 参考资料
 

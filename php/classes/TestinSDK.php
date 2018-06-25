@@ -48,6 +48,10 @@ class TestinSDK
             $this->cookie_name = $cfg["cookie_name"];
         }
 
+        if (array_key_exists("cookie_age", $cfg)) {
+            $this->cookie_age = $cfg["cookie_age"];
+        }
+
         if (array_key_exists($this->cookie_name, $_COOKIE)) {
             $this->clientId = $_COOKIE[$this->cookie_name];
         } else {
