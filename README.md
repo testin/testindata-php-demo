@@ -25,7 +25,7 @@ $sdk = new TestinSDK(array(
 
 | 属性                          | 默认值                   | 备注
 | ---------------------------- | ----------------------- | -------
-| sdk_server                   | http://127.0.0.1:8070   | 第一步中 SDK Server 的地址
+| sdk_server                   | http://127.0.0.1:8070   | SDK Server 的地址
 | curl_timeout_ms              | 200                     | curl 超时时间
 | curl_connection_timeout_ms   | 200                     | curl connection 超时时间
 | cookie_name                  | userid                  | 用来标识用户的 cookie 名称
