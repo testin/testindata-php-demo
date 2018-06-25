@@ -1,43 +1,10 @@
-# TestinData php demo
+# TestinData PHP Demo
 
-> Testin SDK Server 和 PHP 集成的示例
+> TestinData SDK Server 和 PHP 集成的示例
 
-## 第一步：启动 SDK server
+## TestinSDK.php
 
-进到 sdk-server 目录下
-
-```bash
-./start.sh
-```
-
-**配置文件**
-
-| 文件                        | 备注
-| -------------------------- | --------------
-| application.properties     | SDK Server 的配置文件
-
-**配置项**
-
-| 属性                                  | 备注
-| ------------------------------------ | --------
-| testin.data.ab.appkey                | appKey，可从应用列表得到
-| testin.data.ab.cache.directory       | 本地的缓存目录
-
-**第二步：启动 PHP Server**
-
-进到 php 目录下
-
-`php -S 0.0.0.0:8000`
-
-| 文件                          | 功能              
-| ---------------------------- | ---------------- 
-|`classes/TestinSDK.php`       | Testin SDK 类文件     
-|`index.php`                   | 访问的 PHP 入口文件     
-|`A.html`                      | 原始版本静态页面 
-|`B.html`                      | 版本一静态页面
-|`C.html`                      | 版本二静态页面
-
-和 SDK Server 的交互逻辑封装在 [TestinSDK.php](./php/classes/TestinSDK.php) 下，使用时需要引入并初始化：
+和 SDK Server 的交互逻辑封装在 [TestinSDK.php](./php/classes/TestinSDK.php) 下，使用时需要引入次文件并初始化：
 
 ### 引入
 
@@ -45,8 +12,7 @@
 include_once("classes/TestinSDK.php");
 ```
 
-[ ] 支持 composer 方式引入
-
+@todo 支持 composer 方式引入
 
 ### 初始化方法
 
@@ -85,6 +51,51 @@ $variables = $sdk->getVars(array(
 ### track 打点
 ```php
 $sdk->track("baidusp_convert", 1);
+```
+
+# 如何运行 Demo
+
+## 第一步：启动 SDK server
+
+进到 sdk-server 目录下
+
+```bash
+./start.sh
+```
+
+**配置文件**
+
+| 文件                        | 备注
+| -------------------------- | --------------
+| application.properties     | SDK Server 的配置文件
+
+**配置项**
+
+| 属性                                  | 备注
+| ------------------------------------ | --------
+| testin.data.ab.appkey                | appKey，可从应用列表得到
+| testin.data.ab.cache.directory       | 本地的缓存目录
+
+**第二步：启动 PHP Server**
+
+进到 php 目录下
+
+```bash
+./start.sh
+```
+
+| 文件                          | 功能              
+| ---------------------------- | ---------------- 
+|`classes/TestinSDK.php`       | Testin SDK 类文件     
+|`index.php`                   | 访问的 PHP 入口文件     
+|`A.html`                      | 原始版本静态页面 
+|`B.html`                      | 版本一静态页面
+|`C.html`                      | 版本二静态页面
+
+**第三步：访问页面**
+
+```
+open http://127.0.0.1:8000
 ```
 
 ## 参考资料
