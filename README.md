@@ -4,7 +4,7 @@
 
 ## TestinSDK.php
 
-和 SDK Server 的交互逻辑封装在 [TestinSDK.php](./php/classes/TestinSDK.php) 下，使用时需要引入次文件并初始化：
+和 SDK Server 的交互逻辑封装在 [TestinSDK.php](./php/classes/TestinSDK.php) 里，是基于 `php-curl` 模块开发的，使用前要确保服务器上安装了此模块。
 
 ### 引入
 
@@ -12,7 +12,7 @@
 include_once("classes/TestinSDK.php");
 ```
 
-@todo 支持 composer 方式引入
+@todo 未来支持 php composer 方式管理依赖
 
 ### TestinSDK 初始化
 
