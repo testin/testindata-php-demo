@@ -2,7 +2,10 @@
 
 include_once("classes/TestinSDK.php");
 
-$sdk = new TestinSDK();
+$sdk = new TestinSDK(array(
+    "sdk_server" => "http://127.0.0.1:8070",
+    "cookie_name" => "my_testin_id"
+));
 
 $sdk->setDefaultVars(array(
     "version" => "A"
