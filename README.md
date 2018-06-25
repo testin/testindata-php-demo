@@ -19,8 +19,10 @@ java -jar testin-ab-v1.2.1.war
 
 ## 参考资料
 
-[文档](http://ab.testin.cn/docs/javaSdk.html)
+- [SDK Server 帮助文档](http://ab.testin.cn/docs/javaSdk.html)
+- [php-curl 文档](http://php.net/manual/en/book.curl.php)
 
 ## 更新历史
 
-2018.6.20 最基本的 Demo，未做容错处理
+- 2018.6.20 最基本的 Demo，未做容错处理
+- 2018.6.25 使用 OOP 重构，增加超时处理

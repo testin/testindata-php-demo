@@ -12,4 +12,6 @@ $variables = $sdk->getVars(array(
     "layerId" => 290504
 ));
 
+$sdk->track("baidusp_convert", 1);
+
 echo file_get_contents($variables["version"] . ".html");
